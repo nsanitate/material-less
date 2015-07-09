@@ -1,0 +1,126 @@
+@import "variables.less";
+@import "structure.less";
+@import "typography.less";
+@import "layout.less";
+
+@import "components/button.less";
+@import "components/content.less";
+
+@import "../app/bower_components/font-awesome/less/font-awesome.less";
+
+@background-color:           #3c454f;
+@primary-color:              #71b1d1;
+@muted-color:                #c9dfe9;
+@fa-font-path:               "../bower_components/font-awesome/fonts";
+
+header {
+	height: 30px;
+	background-color: @background-color;
+	
+	nav {
+		margin: 0 20px;
+		
+		button {
+			background-color: transparent;
+			color: #fff;
+		}
+	}
+}
+
+aside {
+	width: 200px;
+	background-color: @primary-color;
+	
+	nav {
+		margin: 20px 0;
+		
+		button {
+			height: 50px;
+			background-color: @primary-color;
+			color: #fff;
+			
+			i {
+				width: 60px;
+				text-align: center;
+			}
+			
+			span {
+				font-size: 11px;
+				
+				&.title {
+					overflow: hidden;
+					font-weight: bold;
+					text-transform: uppercase;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+				}
+				
+				&.hint {
+					color: @muted-color;
+				}
+			}
+			
+			&:hover {
+				background-color: #7cc1de;
+			}
+			
+			&:active {
+				background-color: #fff;
+				color: #323232;
+				
+				span.hint {
+					color: #323232;
+				}
+			}
+		}
+	}
+}
+
+footer {
+	height: 60px;
+	background-color: @background-color;
+	color: #fff;
+	
+	nav {
+		margin: 0 20px;
+		
+		button {
+			height: 60px;
+			padding: 0 10px;
+			background-color: transparent;
+			color: #fff;
+							
+			&:hover {
+				background-color: #505861;
+			}
+			
+			&.linear {
+				i {
+					margin-right: 10px;
+				}
+			}
+			
+			&.stacked {
+				width: 80px;
+				i {
+					font-size: 20px;
+					margin-bottom: 10px;
+				}
+				
+				span {
+					font-size: 9px;
+				}
+			}
+						
+			&.icon {
+				width: 43px;
+				font-size: 18px;
+			}
+						
+			span {
+				font-weight: bold;
+				text-transform: uppercase;
+			}
+		}
+	}
+}
